@@ -5,18 +5,18 @@ import {
 } from "./chunk-PQU2JPHH.js";
 import {
   _isTestEnvironment
-} from "./chunk-BTAVFDPX.js";
+} from "./chunk-F5YF3NDX.js";
 import {
   supportsScrollBehavior
 } from "./chunk-CIGKH54X.js";
 import {
-  coerceCssPixelValue
-} from "./chunk-DZBF2YG3.js";
-import {
   DomPortalOutlet,
   PortalModule,
   TemplatePortal
-} from "./chunk-HEIOKFTP.js";
+} from "./chunk-7YHK44P2.js";
+import {
+  coerceCssPixelValue
+} from "./chunk-DZBF2YG3.js";
 import {
   ESCAPE,
   _CdkPrivateStyleLoader,
@@ -25,7 +25,7 @@ import {
   _getEventTarget,
   coerceArray,
   hasModifierKey
-} from "./chunk-AAY2N3UE.js";
+} from "./chunk-CNHU52T7.js";
 import {
   Platform
 } from "./chunk-E5LYV4HN.js";
@@ -2881,7 +2881,9 @@ var FullscreenOverlayContainer = class _FullscreenOverlayContainer extends Overl
 
 export {
   OverlayConfig,
+  OverlayContainer,
+  OverlayRef,
   Overlay,
   OverlayModule
 };
-//# sourceMappingURL=chunk-T2KAQOYB.js.map
+//# sourceMappingURL=chunk-SIRDDQCG.js.map

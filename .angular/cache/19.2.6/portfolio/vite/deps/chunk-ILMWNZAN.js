@@ -4,7 +4,7 @@ import {
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   normalizePassiveListenerOptions
-} from "./chunk-AAY2N3UE.js";
+} from "./chunk-CNHU52T7.js";
 import {
   Platform,
   coerceElement
@@ -612,4 +612,4 @@ export {
   MAT_RIPPLE_GLOBAL_OPTIONS,
   MatRipple
 };
-//# sourceMappingURL=chunk-XXRJ4WB6.js.map
+//# sourceMappingURL=chunk-ILMWNZAN.js.map

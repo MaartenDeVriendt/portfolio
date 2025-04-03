@@ -3206,6 +3206,8 @@ export {
   coerceArray,
   CdkObserveContent,
   ObserversModule,
+  InteractivityChecker,
+  FocusTrapFactory,
   A11yModule,
   _IdGenerator,
   hasModifierKey,
@@ -3213,4 +3215,4 @@ export {
   AriaDescriber,
   MatCommonModule
 };
-//# sourceMappingURL=chunk-AAY2N3UE.js.map
+//# sourceMappingURL=chunk-CNHU52T7.js.map
