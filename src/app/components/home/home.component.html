@@ -1,0 +1,35 @@
+<div class="home-container">
+  <mat-card class="welcome-card">
+    <mat-card-header>
+      <mat-card-title>PORTFOLIO I-Talent</mat-card-title>
+      <mat-card-subtitle>Maarten De Vriendt</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Welkom op mijn I-Talent portfolio. Hier vind je een overzicht van mijn professionele ontwikkeling, seminars, innovaties en internationale ervaringen.</p>
+    </mat-card-content>
+  </mat-card>
+
+  <h2 class="section-title">Mijn Activiteiten</h2>
+  <div class="activities-grid">
+    <mat-card class="activity-card" *ngFor="let activity of activities" [routerLink]="activity.route">
+      <mat-card-header>
+        <mat-card-title>{{activity.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{activity.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
+  <h2 class="section-title">Uitgelichte Projecten</h2>
+  <div class="activities-grid">
+    <mat-card class="activity-card" *ngFor="let detailedActivity of detailedActivities" [routerLink]="detailedActivity.route">
+      <mat-card-header>
+        <mat-card-title>{{detailedActivity.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{detailedActivity.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem;
+}
+
+.welcome-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem !important;
+  border-radius: 12px !important;
+  
+  body.light-theme & {
+    border-top: 4px solid #ff6d00 !important;
+  }
+}
+
+.section-title {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #9cffac, transparent);
+    
+    body.light-theme & {
+      background: linear-gradient(to right, #ff6d00, transparent);
+    }
+  }
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.activity-card {
+  cursor: pointer;
+  min-height: 150px;
+  
+  body.light-theme & {
+    border-top: 3px solid transparent;
+    transition: border-top-color 0.3s ease;
+    
+    &:hover {
+      border-top-color: #ff6d00;
+    }
+  }
+  
+  .mat-mdc-card-content {
+    padding: 1rem 1.5rem;
+  }
+  
+  .mat-mdc-card-header {
+    padding: 1.5rem 1.5rem 0;
+  }
+}

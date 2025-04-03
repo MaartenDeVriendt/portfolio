@@ -1,0 +1,53 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 64px);
+}
+
+a.active {
+  font-weight: 500;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+// Responsive aanpassingen voor kleinere schermen
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 1.2rem;
+  }
+  
+  .subtitle {
+    font-size: 0.8rem;
+  }
+}

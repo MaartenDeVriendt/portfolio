@@ -1,0 +1,10 @@
+<button 
+  mat-icon-button 
+  matTooltip="Schakel tussen light en dark mode"
+  (click)="toggleTheme()" 
+  aria-label="Toggle theme"
+  class="theme-toggle-button"
+>
+  <mat-icon *ngIf="(currentTheme$ | async) === 'dark-theme'" class="light-icon">light_mode</mat-icon>
+  <mat-icon *ngIf="(currentTheme$ | async) === 'light-theme'" class="dark-icon">dark_mode</mat-icon>
+</button>

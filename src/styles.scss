@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+/* Basisstijlen */
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Dark theme (standaard) */
+body { 
+  background-color: #121212;
+  background-image: linear-gradient(to bottom, #121212, #1e1e1e);
+  color: #e0e0e0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Direct styling voor mat-card in dark mode */
+.mat-mdc-card {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+  border-left: 3px solid transparent !important;
+  backdrop-filter: blur(10px);
+}
+
+.section-title, .page-title, .activity-section h2 {
+  color: #9cffac !important;
+  text-shadow: 0 0 10px rgba(156, 255, 172, 0.2);
+  letter-spacing: 0.5px;
+}
+
+/* Light theme overrides - Warm amber/oranje thema */
+body.light-theme {
+  background-color: #fdf7ed;
+  background-image: linear-gradient(135deg, #fdf7ed, #fff8e8);
+  color: #5d4037;
+}
+
+body.light-theme .mat-mdc-card {
+  background-color: white !important;
+  color: #5d4037 !important;
+  box-shadow: 0 4px 15px rgba(193, 121, 36, 0.1) !important;
+  border-left: 3px solid transparent !important;
+  backdrop-filter: none;
+}
+
+body.light-theme .section-title,
+body.light-theme .page-title,
+body.light-theme .activity-section h2 {
+  color: #ff6d00 !important;
+  text-shadow: 0 0 10px rgba(255, 109, 0, 0.05);
+}
+
+body.light-theme .project-outcome {
+  color: #d84315 !important;
+}
+
+/* Toolbar styling */
+body.light-theme .mat-toolbar.mat-primary {
+  background: linear-gradient(to right, #ff6d00, #ff9100) !important;
+  box-shadow: 0 2px 10px rgba(255, 109, 0, 0.2);
+}
+
+/* Card hover effecten voor dark theme */
+.mat-mdc-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  border-radius: 8px !important;
+}
+
+.mat-mdc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7) !important;
+  background-color: #252525 !important;
+  border-left: 3px solid #9cffac !important;
+}
+
+/* Card hover effecten voor light theme */
+body.light-theme .mat-mdc-card:hover {
+  background-color: #fff8e1 !important;
+  box-shadow: 0 8px 20px rgba(255, 109, 0, 0.15) !important;
+  border-left: 3px solid #ff6d00 !important;
+}
+
+/* Extra dark mode verbeteringen */
+body:not(.light-theme) .mat-mdc-card-title {
+  color: #9cffac !important;
+}
+
+body:not(.light-theme) .mat-toolbar.mat-primary {
+  background: linear-gradient(to right, #1e1e1e, #252525) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.light-theme) .skills-list li {
+  background-color: #252525 !important;
+  border: 1px solid #333 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+body:not(.light-theme) a.mat-mdc-button {
+  color: #e0e0e0 !important;
+}
+
+body:not(.light-theme) a.mat-mdc-button.active {
+  background-color: rgba(156, 255, 172, 0.15) !important;
+  color: #9cffac !important;
+}
+
+/* Extra light mode verbeteringen */
+body.light-theme .mat-mdc-card-title {
+  color: #ff6d00 !important;
+  font-weight: 500;
+}
+
+body.light-theme .skills-list li {
+  background-color: white !important;
+  border: 1px solid rgba(255, 109, 0, 0.1) !important;
+  box-shadow: 0 2px 8px rgba(255, 109, 0, 0.05) !important;
+}
+
+body.light-theme .skills-list li:hover {
+  background-color: #fff8e1 !important;
+  border-color: rgba(255, 109, 0, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(255, 109, 0, 0.1) !important;
+}
+
+body.light-theme a.mat-mdc-button {
+  color: #5d4037 !important;
+}
+
+body.light-theme a.mat-mdc-button.active {
+  background-color: rgba(255, 109, 0, 0.15) !important;
+  color: #ff6d00 !important;
+}

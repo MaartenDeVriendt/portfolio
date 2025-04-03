@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Afbeeldingen Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    img { max-width: 300px; margin: 10px; border: 1px solid #ccc; }
+    .success { color: green; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>Afbeeldingen Test</h1>
+  
+  <div>
+    <h2>Test 1: Relatieve paden vanuit assets</h2>
+    <img src="images/internationalization/hackathon_pizza.jpeg" alt="Test 1" 
+         onerror="this.nextElementSibling.className='error'; this.nextElementSibling.textContent='FOUT: Afbeelding kon niet worden geladen'"
+         onload="this.nextElementSibling.className='success'; this.nextElementSibling.textContent='Afbeelding succesvol geladen!'">
+    <p></p>
+  </div>
+
+  <div>
+    <h2>Test 2: Volledig pad vanaf root</h2>
+    <img src="/assets/images/internationalization/hackathon_pizza.jpeg" alt="Test 2"
+         onerror="this.nextElementSibling.className='error'; this.nextElementSibling.textContent='FOUT: Afbeelding kon niet worden geladen'"
+         onload="this.nextElementSibling.className='success'; this.nextElementSibling.textContent='Afbeelding succesvol geladen!'">
+    <p></p>
+  </div>
+
+  <div>
+    <h2>Test 3: Bestandsnaam met spatie</h2>
+    <img src="images/internationalization/IMG_3501.jpeg" alt="Test 3"
+         onerror="this.nextElementSibling.className='error'; this.nextElementSibling.textContent='FOUT: Afbeelding kon niet worden geladen'"
+         onload="this.nextElementSibling.className='success'; this.nextElementSibling.textContent='Afbeelding succesvol geladen!'">
+    <p></p>
+  </div>
+
+  <div>
+    <h2>Test 4: Lange bestandsnaam</h2>
+    <img src="images/internationalization/B22F2B28-538B-465A-94E9-C64718D5276A.jpg" alt="Test 4"
+         onerror="this.nextElementSibling.className='error'; this.nextElementSibling.textContent='FOUT: Afbeelding kon niet worden geladen'"
+         onload="this.nextElementSibling.className='success'; this.nextElementSibling.textContent='Afbeelding succesvol geladen!'">
+    <p></p>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Test pagina geladen');
+    });
+  </script>
+</body>
+</html> 

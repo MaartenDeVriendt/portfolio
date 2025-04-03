@@ -1,0 +1,162 @@
+<div class="internationalization-container">
+  <h1 class="page-title">Internationalisering</h1>
+  
+  <div class="international-locations-container">
+    <div class="international-list">
+      @for (international of internationals; track international.id) {
+        <mat-card class="international-card">
+          <mat-card-header>
+            <mat-card-title>{{ international.title }}</mat-card-title>
+            <mat-card-subtitle>{{ international.country }}</mat-card-subtitle>
+          </mat-card-header>
+          
+          @if (international.images && international.images.length > 0) {
+            <div class="image-gallery">
+              <div class="image-container">
+                <img 
+                  [src]="international.images[selectedImageIndex]" 
+                  alt="Hackathon for Good - Afbeelding {{ selectedImageIndex + 1 }}" 
+                  class="gallery-image"
+                  onerror="this.onerror=null; this.src='assets/images/placeholder.png';"
+                  (click)="openLightbox(international.images[selectedImageIndex])"
+                >
+                <div class="image-navigation">
+                  <button mat-icon-button (click)="prevImage(international.images)" class="nav-button prev">
+                    <mat-icon>chevron_left</mat-icon>
+                  </button>
+                  <span class="image-counter">{{ selectedImageIndex + 1 }} / {{ international.images.length }}</span>
+                  <button mat-icon-button (click)="nextImage(international.images)" class="nav-button next">
+                    <mat-icon>chevron_right</mat-icon>
+                  </button>
+                </div>
+              </div>
+              
+              <div class="thumbnail-container">
+                @for (image of international.images; track $index) {
+                  <div 
+                    class="thumbnail" 
+                    [class.active]="$index === selectedImageIndex"
+                    (click)="selectedImageIndex = $index">
+                    <img 
+                      [src]="image" 
+                      alt="Thumbnail {{ $index + 1 }}"
+                      onerror="this.onerror=null; this.src='assets/images/placeholder.png';"
+                      (contextmenu)="openLightbox(image); $event.preventDefault()"
+                    >
+                  </div>
+                }
+              </div>
+            </div>
+          }
+          
+          <mat-card-content>
+            <p>{{ international.description }}</p>
+            
+            @if (international.sessions && international.sessions.length > 0) {
+              <mat-expansion-panel class="sessions-panel" [expanded]="international.id === 1">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>Sessies</mat-panel-title>
+                </mat-expansion-panel-header>
+                
+                <div class="sessions-container">
+                  @for (session of international.sessions; track session.id) {
+                    <div class="session-item">
+                      <div class="session-header">
+                        <div class="detail">
+                          <mat-icon>event</mat-icon>
+                          <span>{{ session.date }}</span>
+                        </div>
+                        <div class="detail">
+                          <mat-icon>schedule</mat-icon>
+                          <span>{{ session.time }}</span>
+                        </div>
+                      </div>
+                      @if (session.description) {
+                        <p class="session-description">{{ session.description }}</p>
+                      }
+                    </div>
+                    @if (!$last) {
+                      <mat-divider></mat-divider>
+                    }
+                  }
+                </div>
+              </mat-expansion-panel>
+            }
+            
+            <div class="international-details">
+              @if (international.startDate && international.endDate) {
+                <div class="detail">
+                  <mat-icon>date_range</mat-icon>
+                  <span>{{ international.startDate }} - {{ international.endDate }}</span>
+                </div>
+              }
+              @if (international.startTime && international.endTime) {
+                <div class="detail">
+                  <mat-icon>schedule</mat-icon>
+                  <span>{{ international.startTime }} - {{ international.endTime }}</span>
+                </div>
+              }
+              <div class="detail">
+                <mat-icon>location_on</mat-icon>
+                <span>{{ international.location }}</span>
+              </div>
+              <div class="detail">
+                <mat-icon>public</mat-icon>
+                <span>{{ international.country }}</span>
+              </div>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" (click)="showOnMap(international.building)">
+              <mat-icon>map</mat-icon> Toon op kaart
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+    
+    <div class="map-container">
+      <mat-card class="map-card">
+        <mat-card-header>
+          <mat-card-title>Locatie: {{ selectedLocation.name }}</mat-card-title>
+          <mat-card-subtitle>{{ selectedLocation.address }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <!-- Google Maps embed -->
+          @if (mapUrl) {
+            <iframe
+              width="100%"
+              height="450"
+              style="border:0"
+              loading="lazy"
+              allowfullscreen
+              [src]="mapUrl"
+              title="Google Maps"
+            ></iframe>
+          }
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox voor vergrote weergave -->
+<div class="lightbox-overlay" *ngIf="showLightbox" (click)="closeLightbox()">
+  <div class="lightbox-container" (click)="$event.stopPropagation()">
+    <button class="close-button" (click)="closeLightbox()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <img [src]="lightboxImageSrc" alt="Vergrote afbeelding" class="lightbox-image"
+         onerror="this.onerror=null; this.src='assets/images/placeholder.png';">
+         
+    <!-- Navigatieknoppen in lightbox -->
+    <div class="lightbox-navigation">
+      <button class="nav-button prev" (click)="prevLightboxImage(internationals[0].images)">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button class="nav-button next" (click)="nextLightboxImage(internationals[0].images)">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

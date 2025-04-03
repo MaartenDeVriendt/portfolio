@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <div class="title-container">
+    <span class="main-title">PORTFOLIO I-Talent</span>
+    <span class="subtitle">Maarten De Vriendt</span>
+  </div>
+  <span class="spacer"></span>
+  <nav>
+    <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+    <a mat-button routerLink="/seminars" routerLinkActive="active">Seminars</a>
+    <a mat-button routerLink="/personal-development" routerLinkActive="active">Persoonlijke Ontwikkeling</a>
+    <a mat-button routerLink="/innovation" routerLinkActive="active">Innovatie</a>
+    <a mat-button routerLink="/internationalization" routerLinkActive="active">Internationalisering</a>
+    <a mat-button routerLink="/extras" routerLinkActive="active">Extra's</a>
+    
+    <button mat-button [matMenuTriggerFor]="activitiesMenu">Activiteiten</button>
+    <mat-menu #activitiesMenu="matMenu">
+      <a mat-menu-item routerLink="/activities/1">Activiteit 1: Projectmanagement</a>
+      <a mat-menu-item routerLink="/activities/2">Activiteit 2: Programmeren</a>
+      <a mat-menu-item routerLink="/activities/3">Activiteit 3: Onderzoek</a>
+      <a mat-menu-item routerLink="/activities/4">Activiteit 4: Teamleiderschap</a>
+    </mat-menu>
+    
+    <app-theme-toggle></app-theme-toggle>
+  </nav>
+</mat-toolbar>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

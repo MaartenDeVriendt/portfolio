@@ -1,0 +1,99 @@
+<div class="innovation-container">
+  <h1 class="page-title">Innovaties</h1>
+  
+  <div class="innovation-locations-container">
+    <div class="innovation-list">
+      @for (innovation of innovations; track innovation.id) {
+        <mat-card class="innovation-card">
+          <mat-card-header>
+            <mat-card-title>{{ innovation.title }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ innovation.description }}</p>
+            
+            @if (innovation.sessions && innovation.sessions.length > 0) {
+              <mat-expansion-panel class="sessions-panel" [expanded]="innovation.id === 1">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>Sessies</mat-panel-title>
+                </mat-expansion-panel-header>
+                
+                <div class="sessions-container">
+                  @for (session of innovation.sessions; track session.id) {
+                    <div class="session-item">
+                      <div class="session-header">
+                        <div class="detail">
+                          <mat-icon>event</mat-icon>
+                          <span>{{ session.date }}</span>
+                        </div>
+                        <div class="detail">
+                          <mat-icon>schedule</mat-icon>
+                          <span>{{ session.time }}</span>
+                        </div>
+                      </div>
+                      @if (session.description) {
+                        <p class="session-description">{{ session.description }}</p>
+                      }
+                    </div>
+                    @if (!$last) {
+                      <mat-divider></mat-divider>
+                    }
+                  }
+                </div>
+              </mat-expansion-panel>
+              
+              <div class="innovation-details">
+                <div class="detail">
+                  <mat-icon>location_on</mat-icon>
+                  <span>{{ innovation.location }}</span>
+                </div>
+              </div>
+            } @else {
+              <div class="innovation-details">
+                <div class="detail">
+                  <mat-icon>event</mat-icon>
+                  <span>{{ innovation.date }}</span>
+                </div>
+                <div class="detail">
+                  <mat-icon>schedule</mat-icon>
+                  <span>{{ innovation.time }}</span>
+                </div>
+                <div class="detail">
+                  <mat-icon>location_on</mat-icon>
+                  <span>{{ innovation.location }}</span>
+                </div>
+              </div>
+            }
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" (click)="showOnMap(innovation.building)">
+              <mat-icon>map</mat-icon> Toon op kaart
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </div>
+    
+    <div class="map-container">
+      <mat-card class="map-card">
+        <mat-card-header>
+          <mat-card-title>Locatie: {{ selectedLocation?.name }}</mat-card-title>
+          <mat-card-subtitle>{{ selectedLocation?.address }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <!-- Google Maps embed -->
+          @if (mapUrl) {
+            <iframe
+              width="100%"
+              height="450"
+              style="border:0"
+              loading="lazy"
+              allowfullscreen
+              [src]="mapUrl"
+              title="Google Maps"
+            ></iframe>
+          }
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

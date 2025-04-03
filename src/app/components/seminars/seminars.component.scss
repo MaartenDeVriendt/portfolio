@@ -1,0 +1,109 @@
+.seminars-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.page-title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.seminars-locations-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.seminars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.seminar-card {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.dark-theme .seminar-card {
+  background-color: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(156, 255, 172, 0.1);
+}
+
+.light-theme .seminar-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 109, 0, 0.1);
+}
+
+.seminar-details {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  mat-icon {
+    font-size: 1.2rem;
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+}
+
+.dark-theme .detail mat-icon {
+  color: #9cffac;
+}
+
+.light-theme .detail mat-icon {
+  color: #ff6d00;
+}
+
+.map-container {
+  position: sticky;
+  top: 2rem;
+}
+
+.map-card {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dark-theme .map-card {
+  background-color: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(156, 255, 172, 0.1);
+}
+
+.light-theme .map-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 109, 0, 0.1);
+}
+
+/* Responsive styling */
+@media (max-width: 1100px) {
+  .seminars-locations-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .seminars-list {
+    max-height: none;
+    padding-right: 0;
+  }
+  
+  .map-container {
+    position: relative;
+    top: 0;
+  }
+}
