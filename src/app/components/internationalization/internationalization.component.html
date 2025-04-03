@@ -151,10 +151,10 @@
          
     <!-- Navigatieknoppen in lightbox -->
     <div class="lightbox-navigation">
-      <button class="nav-button prev" (click)="prevLightboxImage(internationals[0].images)">
+      <button class="nav-button prev" (click)="internationals[0].images && prevLightboxImage(internationals[0].images)">
         <mat-icon>chevron_left</mat-icon>
       </button>
-      <button class="nav-button next" (click)="nextLightboxImage(internationals[0].images)">
+      <button class="nav-button next" (click)="internationals[0].images && nextLightboxImage(internationals[0].images)">
         <mat-icon>chevron_right</mat-icon>
       </button>
     </div>
