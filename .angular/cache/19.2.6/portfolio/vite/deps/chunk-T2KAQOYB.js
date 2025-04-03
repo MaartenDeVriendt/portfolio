@@ -1,13 +1,8 @@
 import {
-  DomPortalOutlet,
-  PortalModule,
-  TemplatePortal
-} from "./chunk-DSXHSN2X.js";
-import {
   ScrollDispatcher,
   ScrollingModule,
   ViewportRuler
-} from "./chunk-R4I6TXEP.js";
+} from "./chunk-PQU2JPHH.js";
 import {
   _isTestEnvironment
 } from "./chunk-BTAVFDPX.js";
@@ -18,6 +13,11 @@ import {
   coerceCssPixelValue
 } from "./chunk-DZBF2YG3.js";
 import {
+  DomPortalOutlet,
+  PortalModule,
+  TemplatePortal
+} from "./chunk-HEIOKFTP.js";
+import {
   ESCAPE,
   _CdkPrivateStyleLoader,
   _IdGenerator,
@@ -25,10 +25,10 @@ import {
   _getEventTarget,
   coerceArray,
   hasModifierKey
-} from "./chunk-JA6MJBHO.js";
+} from "./chunk-AAY2N3UE.js";
 import {
   Platform
-} from "./chunk-C7B6RFW2.js";
+} from "./chunk-E5LYV4HN.js";
 import {
   BidiModule,
   Directionality
@@ -2884,4 +2884,4 @@ export {
   Overlay,
   OverlayModule
 };
-//# sourceMappingURL=chunk-P76VU56N.js.map
+//# sourceMappingURL=chunk-T2KAQOYB.js.map

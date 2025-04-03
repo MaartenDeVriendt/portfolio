@@ -32,16 +32,34 @@
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
+  
+  .mat-mdc-card-title {
+    color: var(--primary-color);
+  }
+  
+  .company-name {
+    color: var(--primary-color) !important;
+    opacity: 0.9 !important;
+    font-weight: 500 !important;
+  }
 }
 
 .dark-theme .seminar-card {
   background-color: rgba(30, 30, 30, 0.8);
   border: 1px solid rgba(156, 255, 172, 0.1);
+  
+  .mat-mdc-card-title, .company-name {
+    color: #9cffac !important;
+  }
 }
 
 .light-theme .seminar-card {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(255, 109, 0, 0.1);
+  
+  .mat-mdc-card-title, .company-name {
+    color: #ff6d00 !important;
+  }
 }
 
 .seminar-details {
@@ -106,4 +124,17 @@
     position: relative;
     top: 0;
   }
+}
+
+/* Directe inline styling om de bedrijfsnamen dezelfde kleur als de titel te geven */
+:host ::ng-deep .company-name {
+  color: inherit !important;
+}
+
+:host ::ng-deep .dark-theme .company-name {
+  color: #9cffac !important;
+}
+
+:host ::ng-deep .light-theme .company-name {
+  color: #ff6d00 !important;
 }

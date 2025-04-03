@@ -1,8 +1,12 @@
 import {
+  UniqueSelectionDispatcher
+} from "./chunk-7FTAVBZT.js";
+import {
   CdkPortalOutlet,
   PortalModule,
   TemplatePortal
-} from "./chunk-DSXHSN2X.js";
+} from "./chunk-HEIOKFTP.js";
+import "./chunk-SZS4RJEH.js";
 import "./chunk-ANJ5H7L2.js";
 import {
   _StructuralStylesLoader
@@ -16,9 +20,9 @@ import {
   _CdkPrivateStyleLoader,
   _IdGenerator,
   hasModifierKey
-} from "./chunk-JA6MJBHO.js";
-import "./chunk-C7B6RFW2.js";
+} from "./chunk-AAY2N3UE.js";
 import "./chunk-M3HR6BUY.js";
+import "./chunk-E5LYV4HN.js";
 import "./chunk-Y7H5UKLR.js";
 import {
   DOCUMENT
@@ -34,7 +38,6 @@ import {
   ElementRef,
   EventEmitter,
   HostAttributeToken,
-  Injectable,
   InjectionToken,
   Input,
   NgModule,
@@ -60,7 +63,6 @@ import {
   ɵɵcontentQuery,
   ɵɵdefineComponent,
   ɵɵdefineDirective,
-  ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵelement,
@@ -87,52 +89,6 @@ import {
   startWith,
   take
 } from "./chunk-S35MAB2V.js";
-
-// node_modules/@angular/cdk/fesm2022/unique-selection-dispatcher-28a150e1.mjs
-var UniqueSelectionDispatcher = class _UniqueSelectionDispatcher {
-  _listeners = [];
-  /**
-   * Notify other items that selection for the given name has been set.
-   * @param id ID of the item.
-   * @param name Name of the item.
-   */
-  notify(id, name) {
-    for (let listener of this._listeners) {
-      listener(id, name);
-    }
-  }
-  /**
-   * Listen for future changes to item selection.
-   * @return Function used to deregister listener
-   */
-  listen(listener) {
-    this._listeners.push(listener);
-    return () => {
-      this._listeners = this._listeners.filter((registered) => {
-        return listener !== registered;
-      });
-    };
-  }
-  ngOnDestroy() {
-    this._listeners = [];
-  }
-  static ɵfac = function UniqueSelectionDispatcher_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _UniqueSelectionDispatcher)();
-  };
-  static ɵprov = ɵɵdefineInjectable({
-    token: _UniqueSelectionDispatcher,
-    factory: _UniqueSelectionDispatcher.ɵfac,
-    providedIn: "root"
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(UniqueSelectionDispatcher, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], null, null);
-})();
 
 // node_modules/@angular/cdk/fesm2022/accordion.mjs
 var CDK_ACCORDION = new InjectionToken("CdkAccordion");

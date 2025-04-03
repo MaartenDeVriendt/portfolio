@@ -2,7 +2,7 @@ import {
   Platform,
   coerceElement,
   coerceNumberProperty
-} from "./chunk-C7B6RFW2.js";
+} from "./chunk-E5LYV4HN.js";
 import {
   BidiModule
 } from "./chunk-Y7H5UKLR.js";
@@ -76,6 +76,7 @@ function isFakeTouchstartFromScreenReader(event) {
 }
 
 // node_modules/@angular/cdk/fesm2022/keycodes-0e4398c6.mjs
+var BACKSPACE = 8;
 var TAB = 9;
 var ENTER = 13;
 var SHIFT = 16;
@@ -91,25 +92,13 @@ var LEFT_ARROW = 37;
 var UP_ARROW = 38;
 var RIGHT_ARROW = 39;
 var DOWN_ARROW = 40;
+var DELETE = 46;
 var ZERO = 48;
 var NINE = 57;
 var A = 65;
 var Z = 90;
 var META = 91;
 var MAC_META = 224;
-
-// node_modules/@angular/cdk/fesm2022/backwards-compatibility-08253a84.mjs
-function _bindEventWithOptions(renderer, target, eventName, callback, options) {
-  const major = parseInt(VERSION.major);
-  const minor = parseInt(VERSION.minor);
-  if (major > 19 || major === 19 && minor > 0 || major === 0 && minor === 0) {
-    return renderer.listen(target, eventName, callback, options);
-  }
-  target.addEventListener(eventName, callback, options);
-  return () => {
-    target.removeEventListener(eventName, callback, options);
-  };
-}
 
 // node_modules/@angular/cdk/fesm2022/shadow-dom-318658ae.mjs
 var shadowDomIsSupported;
@@ -143,6 +132,19 @@ function _getFocusedElementPierceShadowDom() {
 }
 function _getEventTarget(event) {
   return event.composedPath ? event.composedPath()[0] : event.target;
+}
+
+// node_modules/@angular/cdk/fesm2022/backwards-compatibility-08253a84.mjs
+function _bindEventWithOptions(renderer, target, eventName, callback, options) {
+  const major = parseInt(VERSION.major);
+  const minor = parseInt(VERSION.minor);
+  if (major > 19 || major === 19 && minor > 0 || major === 0 && minor === 0) {
+    return renderer.listen(target, eventName, callback, options);
+  }
+  target.addEventListener(eventName, callback, options);
+  return () => {
+    target.removeEventListener(eventName, callback, options);
+  };
 }
 
 // node_modules/@angular/cdk/fesm2022/passive-listeners-93cf8be8.mjs
@@ -695,6 +697,37 @@ var _CdkPrivateStyleLoader = class __CdkPrivateStyleLoader {
     type: Injectable,
     args: [{
       providedIn: "root"
+    }]
+  }], null, null);
+})();
+
+// node_modules/@angular/cdk/fesm2022/visually-hidden-9a93b8bb.mjs
+var _VisuallyHiddenLoader = class __VisuallyHiddenLoader {
+  static ɵfac = function _VisuallyHiddenLoader_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || __VisuallyHiddenLoader)();
+  };
+  static ɵcmp = ɵɵdefineComponent({
+    type: __VisuallyHiddenLoader,
+    selectors: [["ng-component"]],
+    exportAs: ["cdkVisuallyHidden"],
+    decls: 0,
+    vars: 0,
+    template: function _VisuallyHiddenLoader_Template(rf, ctx) {
+    },
+    styles: [".cdk-visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap;outline:0;-webkit-appearance:none;-moz-appearance:none;left:0}[dir=rtl] .cdk-visually-hidden{left:auto;right:0}"],
+    encapsulation: 2,
+    changeDetection: 0
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(_VisuallyHiddenLoader, [{
+    type: Component,
+    args: [{
+      exportAs: "cdkVisuallyHidden",
+      encapsulation: ViewEncapsulation.None,
+      template: "",
+      changeDetection: ChangeDetectionStrategy.OnPush,
+      styles: [".cdk-visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap;outline:0;-webkit-appearance:none;-moz-appearance:none;left:0}[dir=rtl] .cdk-visually-hidden{left:auto;right:0}"]
     }]
   }], null, null);
 })();
@@ -1409,37 +1442,6 @@ var FocusKeyManager = class extends ListKeyManager {
     }
   }
 };
-
-// node_modules/@angular/cdk/fesm2022/visually-hidden-9a93b8bb.mjs
-var _VisuallyHiddenLoader = class __VisuallyHiddenLoader {
-  static ɵfac = function _VisuallyHiddenLoader_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || __VisuallyHiddenLoader)();
-  };
-  static ɵcmp = ɵɵdefineComponent({
-    type: __VisuallyHiddenLoader,
-    selectors: [["ng-component"]],
-    exportAs: ["cdkVisuallyHidden"],
-    decls: 0,
-    vars: 0,
-    template: function _VisuallyHiddenLoader_Template(rf, ctx) {
-    },
-    styles: [".cdk-visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap;outline:0;-webkit-appearance:none;-moz-appearance:none;left:0}[dir=rtl] .cdk-visually-hidden{left:auto;right:0}"],
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(_VisuallyHiddenLoader, [{
-    type: Component,
-    args: [{
-      exportAs: "cdkVisuallyHidden",
-      encapsulation: ViewEncapsulation.None,
-      template: "",
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      styles: [".cdk-visually-hidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap;outline:0;-webkit-appearance:none;-moz-appearance:none;left:0}[dir=rtl] .cdk-visually-hidden{left:auto;right:0}"]
-    }]
-  }], null, null);
-})();
 
 // node_modules/@angular/cdk/fesm2022/array-6239d2f8.mjs
 function coerceArray(value) {
@@ -3182,6 +3184,8 @@ var MatCommonModule = class _MatCommonModule {
 export {
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
+  BACKSPACE,
+  TAB,
   ENTER,
   ESCAPE,
   SPACE,
@@ -3189,14 +3193,19 @@ export {
   UP_ARROW,
   RIGHT_ARROW,
   DOWN_ARROW,
+  DELETE,
+  A,
+  _getFocusedElementPierceShadowDom,
   _getEventTarget,
   _bindEventWithOptions,
   normalizePassiveListenerOptions,
   FocusMonitor,
   CdkMonitorFocus,
   _CdkPrivateStyleLoader,
+  _VisuallyHiddenLoader,
   coerceArray,
   CdkObserveContent,
+  ObserversModule,
   A11yModule,
   _IdGenerator,
   hasModifierKey,
@@ -3204,4 +3213,4 @@ export {
   AriaDescriber,
   MatCommonModule
 };
-//# sourceMappingURL=chunk-JA6MJBHO.js.map
+//# sourceMappingURL=chunk-AAY2N3UE.js.map

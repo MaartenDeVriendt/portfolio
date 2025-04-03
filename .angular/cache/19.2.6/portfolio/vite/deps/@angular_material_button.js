@@ -1,46 +1,36 @@
 import {
+  MatRippleLoader
+} from "./chunk-NRAOYP6K.js";
+import {
   MatRippleModule
-} from "./chunk-G4EHSOLN.js";
-import {
-  MAT_RIPPLE_GLOBAL_OPTIONS,
-  RippleRenderer,
-  defaultRippleAnimationConfig
-} from "./chunk-AIICCX4H.js";
-import {
-  _StructuralStylesLoader
-} from "./chunk-2TIQL37G.js";
+} from "./chunk-KCS6HEKJ.js";
+import "./chunk-XXRJ4WB6.js";
 import "./chunk-BTAVFDPX.js";
 import "./chunk-CIGKH54X.js";
 import "./chunk-DZBF2YG3.js";
 import {
+  _StructuralStylesLoader
+} from "./chunk-2TIQL37G.js";
+import {
   FocusMonitor,
   MatCommonModule,
-  _CdkPrivateStyleLoader,
-  _bindEventWithOptions,
-  _getEventTarget
-} from "./chunk-JA6MJBHO.js";
-import {
-  Platform
-} from "./chunk-C7B6RFW2.js";
+  _CdkPrivateStyleLoader
+} from "./chunk-AAY2N3UE.js";
 import "./chunk-M3HR6BUY.js";
+import "./chunk-E5LYV4HN.js";
 import "./chunk-Y7H5UKLR.js";
-import {
-  DOCUMENT
-} from "./chunk-4EREAO4C.js";
+import "./chunk-4EREAO4C.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,
   Component,
   Directive,
   ElementRef,
-  Injectable,
   InjectionToken,
-  Injector,
   Input,
   NgModule,
   NgZone,
   Renderer2,
-  RendererFactory2,
   ViewEncapsulation,
   booleanAttribute,
   inject,
@@ -52,7 +42,6 @@ import {
   ɵɵclassProp,
   ɵɵdefineComponent,
   ɵɵdefineDirective,
-  ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵelement,
@@ -66,148 +55,6 @@ import {
   __spreadProps,
   __spreadValues
 } from "./chunk-S35MAB2V.js";
-
-// node_modules/@angular/material/fesm2022/ripple-loader-64444b06.mjs
-var eventListenerOptions = {
-  capture: true
-};
-var rippleInteractionEvents = ["focus", "mousedown", "mouseenter", "touchstart"];
-var matRippleUninitialized = "mat-ripple-loader-uninitialized";
-var matRippleClassName = "mat-ripple-loader-class-name";
-var matRippleCentered = "mat-ripple-loader-centered";
-var matRippleDisabled = "mat-ripple-loader-disabled";
-var MatRippleLoader = class _MatRippleLoader {
-  _document = inject(DOCUMENT);
-  _animationMode = inject(ANIMATION_MODULE_TYPE, {
-    optional: true
-  });
-  _globalRippleOptions = inject(MAT_RIPPLE_GLOBAL_OPTIONS, {
-    optional: true
-  });
-  _platform = inject(Platform);
-  _ngZone = inject(NgZone);
-  _injector = inject(Injector);
-  _eventCleanups;
-  _hosts = /* @__PURE__ */ new Map();
-  constructor() {
-    const renderer = inject(RendererFactory2).createRenderer(null, null);
-    this._eventCleanups = this._ngZone.runOutsideAngular(() => {
-      return rippleInteractionEvents.map((name) => _bindEventWithOptions(renderer, this._document, name, this._onInteraction, eventListenerOptions));
-    });
-  }
-  ngOnDestroy() {
-    const hosts = this._hosts.keys();
-    for (const host of hosts) {
-      this.destroyRipple(host);
-    }
-    this._eventCleanups.forEach((cleanup) => cleanup());
-  }
-  /**
-   * Configures the ripple that will be rendered by the ripple loader.
-   *
-   * Stores the given information about how the ripple should be configured on the host
-   * element so that it can later be retrived & used when the ripple is actually created.
-   */
-  configureRipple(host, config) {
-    host.setAttribute(matRippleUninitialized, this._globalRippleOptions?.namespace ?? "");
-    if (config.className || !host.hasAttribute(matRippleClassName)) {
-      host.setAttribute(matRippleClassName, config.className || "");
-    }
-    if (config.centered) {
-      host.setAttribute(matRippleCentered, "");
-    }
-    if (config.disabled) {
-      host.setAttribute(matRippleDisabled, "");
-    }
-  }
-  /** Sets the disabled state on the ripple instance corresponding to the given host element. */
-  setDisabled(host, disabled) {
-    const ripple = this._hosts.get(host);
-    if (ripple) {
-      ripple.target.rippleDisabled = disabled;
-      if (!disabled && !ripple.hasSetUpEvents) {
-        ripple.hasSetUpEvents = true;
-        ripple.renderer.setupTriggerEvents(host);
-      }
-    } else if (disabled) {
-      host.setAttribute(matRippleDisabled, "");
-    } else {
-      host.removeAttribute(matRippleDisabled);
-    }
-  }
-  /**
-   * Handles creating and attaching component internals
-   * when a component is initially interacted with.
-   */
-  _onInteraction = (event) => {
-    const eventTarget = _getEventTarget(event);
-    if (eventTarget instanceof HTMLElement) {
-      const element = eventTarget.closest(`[${matRippleUninitialized}="${this._globalRippleOptions?.namespace ?? ""}"]`);
-      if (element) {
-        this._createRipple(element);
-      }
-    }
-  };
-  /** Creates a MatRipple and appends it to the given element. */
-  _createRipple(host) {
-    if (!this._document || this._hosts.has(host)) {
-      return;
-    }
-    host.querySelector(".mat-ripple")?.remove();
-    const rippleEl = this._document.createElement("span");
-    rippleEl.classList.add("mat-ripple", host.getAttribute(matRippleClassName));
-    host.append(rippleEl);
-    const isNoopAnimations = this._animationMode === "NoopAnimations";
-    const globalOptions = this._globalRippleOptions;
-    const enterDuration = isNoopAnimations ? 0 : globalOptions?.animation?.enterDuration ?? defaultRippleAnimationConfig.enterDuration;
-    const exitDuration = isNoopAnimations ? 0 : globalOptions?.animation?.exitDuration ?? defaultRippleAnimationConfig.exitDuration;
-    const target = {
-      rippleDisabled: isNoopAnimations || globalOptions?.disabled || host.hasAttribute(matRippleDisabled),
-      rippleConfig: {
-        centered: host.hasAttribute(matRippleCentered),
-        terminateOnPointerUp: globalOptions?.terminateOnPointerUp,
-        animation: {
-          enterDuration,
-          exitDuration
-        }
-      }
-    };
-    const renderer = new RippleRenderer(target, this._ngZone, rippleEl, this._platform, this._injector);
-    const hasSetUpEvents = !target.rippleDisabled;
-    if (hasSetUpEvents) {
-      renderer.setupTriggerEvents(host);
-    }
-    this._hosts.set(host, {
-      target,
-      renderer,
-      hasSetUpEvents
-    });
-    host.removeAttribute(matRippleUninitialized);
-  }
-  destroyRipple(host) {
-    const ripple = this._hosts.get(host);
-    if (ripple) {
-      ripple.renderer._removeTriggerEvents();
-      this._hosts.delete(host);
-    }
-  }
-  static ɵfac = function MatRippleLoader_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _MatRippleLoader)();
-  };
-  static ɵprov = ɵɵdefineInjectable({
-    token: _MatRippleLoader,
-    factory: _MatRippleLoader.ɵfac,
-    providedIn: "root"
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatRippleLoader, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], () => [], null);
-})();
 
 // node_modules/@angular/material/fesm2022/icon-button-701541b9.mjs
 var _c0 = ["mat-icon-button", ""];

@@ -134,3 +134,41 @@ body.light-theme a.mat-mdc-button.active {
   background-color: rgba(255, 109, 0, 0.15) !important;
   color: #ff6d00 !important;
 }
+
+/* Specifieke styling voor bedrijfsnamen in seminars */
+body:not(.light-theme) app-seminars .mat-mdc-card-subtitle {
+  color: #9cffac !important;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+body.light-theme app-seminars .mat-mdc-card-subtitle {
+  color: #ff6d00 !important;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+body:not(.light-theme) .seminar-card .mdc-card__subtitle {
+  color: #9cffac !important;
+}
+
+body.light-theme .seminar-card .mdc-card__subtitle {
+  color: #ff6d00 !important;
+}
+
+/* Alternatieve selectoren voor bedrijfsnamen */
+body:not(.light-theme) app-seminars mat-card-subtitle {
+  color: #9cffac !important;
+}
+
+body.light-theme app-seminars mat-card-subtitle {
+  color: #ff6d00 !important;
+}
+
+body:not(.light-theme) app-seminars .mat-mdc-card-header span.mat-mdc-card-subtitle {
+  color: #9cffac !important;
+}
+
+body.light-theme app-seminars .mat-mdc-card-header span.mat-mdc-card-subtitle {
+  color: #ff6d00 !important;
+}
