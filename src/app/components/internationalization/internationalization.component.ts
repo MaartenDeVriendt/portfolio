@@ -63,12 +63,11 @@ export class InternationalizationComponent implements OnInit {
       startTime: '13:00',
       endTime: '16:00',
       images: [
-        'https://media.discordapp.net/attachments/1206607342313934990/1357302052463841321/9B870292-9E24-43EB-864F-773C621EC366.jpg?ex=67efb58a&is=67ee640a&hm=b75e3e4407922d900227acb733529766ede9ddda6d795185c94b2f8a208c4d88&=&format=webp&width=652&height=1160',
-        'https://media.discordapp.net/attachments/1206607342313934990/1357302053092855859/B22F2B28-538B-465A-94E9-C64718D5276A.jpg?ex=67efb58a&is=67ee640a&hm=f88899db801cdf2b04cb7b597a7f29c0a64b2bd4465d04cdb1bf012016130cd6&=&format=webp&width=652&height=1160',
-        'https://media.discordapp.net/attachments/1206607342313934990/1357302054908985437/IMG_3493.jpeg?ex=67efb58b&is=67ee640b&hm=572c712d1958c484d2a80300a0566591b875a029d8cbccf019f02ec0b7baf212&=&format=webp&width=870&height=1160',
-        'https://media.discordapp.net/attachments/1206607342313934990/1357302055839989920/IMG_3501.jpeg?ex=67efb58b&is=67ee640b&hm=bf8f168bedcbe60c91fff5477c5ca11b93188643d348bb9a526b063e72f04f2b&=&format=webp&width=870&height=1160',
-        'https://media.discordapp.net/attachments/1206607342313934990/1357302053902483487/IMG_3486.jpeg?ex=67efb58b&is=67ee640b&hm=cc2d5ee2ae3563a3a0fdbfde278823627c00133295db82441fb718b270ccbf73&=&format=webp&width=870&height=1160',
-
+        'assets/hackathon_pizza.jpeg',
+        'assets/DenHaag.jpg',
+        'assets/DevelopDenHaag.jpg',
+        'assets/GroepsFotoDenHaag.jpeg',
+        'assets/EindpresentatieDenHaag.jpeg',
         
       ]
     }

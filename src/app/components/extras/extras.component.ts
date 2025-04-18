@@ -101,7 +101,7 @@ export class ExtrasComponent implements OnInit {
       ],
       location: 'Wieze, Oktoberhallen',
       date: '28/02/2025 - 02/03/2025',
-      images: ['https://media.discordapp.net/attachments/1206607342313934990/1357379764117307412/7B4CFAA4-6876-40EA-81F7-885D4078F26F.jpeg?ex=67effdea&is=67eeac6a&hm=4c0cbab06f442aaf33d35f350c709d57e06f7613c1a74cf24e658febd4a1d953&=&format=webp&width=1310&height=1280', 'https://media.discordapp.net/attachments/1206607342313934990/1357379271747960993/CEE3D2DE-E55C-406C-A543-5B7D7DB3037B_1_105_c.jpeg?ex=67effd75&is=67eeabf5&hm=b151c99637a7612bec4eafff5cf55634fc33d1db1907093157209573cece4be4&=&format=webp&width=2364&height=1330', 'https://media.discordapp.net/attachments/1206607342313934990/1357379960091705556/CleanShot_2025-04-03_at_17.42.582x.png?ex=67effe19&is=67eeac99&hm=5e656e0bf8418413b415e688f338296bf010f491fc0113079d3dee9a21e9e619&=&format=webp&quality=lossless&width=902&height=700']
+      images: ['assets/fom.jpeg']
     },
     {
       title: 'Giuliano\'s Genk',
@@ -114,7 +114,7 @@ export class ExtrasComponent implements OnInit {
       ],
       location: 'Neerijstraat 41, 3600 Genk',
       date: '01/09/2020 - heden',
-      images: ['https://media.discordapp.net/attachments/1206607342313934990/1357379506813272084/A960DAF4-0F8A-4505-82AA-75B54BAF2F17_1_105_c.jpeg?ex=67effdad&is=67eeac2d&hm=60804b37848bebf37bb62aeaeffdedd6850409dd83bde0d100cd0651d2bd731f&=&format=webp&width=1356&height=1808', 'https://media.discordapp.net/attachments/1206607342313934990/1357379664154198026/CleanShot_2025-04-03_at_17.41.582x.png?ex=67effdd2&is=67eeac52&hm=4ec9b71f4ae78a05fb5cc6de3ae4b2a078bab4b0ffab4709957cd1023a8ad64b&=&format=webp&quality=lossless&width=1110&height=1808']
+      images: ['assets/giulianoGenk.jpg']
     }
   ];
 

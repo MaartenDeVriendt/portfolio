@@ -47,4 +47,27 @@ export class Activity1Component {
     'Een van mijn sterktes bleek mijn kalmte in stressvolle situaties. Ik merkte dat, zelfs als het even misliep of we weinig tijd dreigden te hebben, ik rustig bleef denken en handelen, in plaats van in paniek te raken. Wat je wel hebben moeten bijsturen, is mijn neiging om alles zelf te willen doen. Aanvankelijk nam ik wat te veel verantwoordelijkheid op me, waardoor ik merkte dat ik minder efficiënt werkte. Gelukkig besefte ik dat op tijd en delegeerde ik meer, wat leidde tot een team ten goede kwam.',
     'Achteraf bekeken sluit onze opleiding echt goed aan bij dit soort uitdagingen. Dankzij de brede technologische basis die we meekrijgen, konden we snel schakelen en nieuwe technieken. De combinatie van technische kennis, flexibiliteit en samenwerking maakt dit project iets waar ik met trots op terugkijk. Ik heb het dan ook opgenomen in mijn portfolio – niet alleen vanwege het resultaat, maar ook door de leerervaring en het unieke karakter van de samenwerking met echte professionals.'
   ];
+  
+  media = [
+    {
+      type: 'image',
+      path: 'assets/GroepsFotoDenHaag.jpeg',
+      description: 'Ons team tijdens de Hackathon Den Haag'
+    },
+    {
+      type: 'image',
+      path: 'assets/feedbackHackathon.png',
+      description: 'Feedback van de jury'
+    },
+    {
+      type: 'image',
+      path: 'assets/images/hackathon3.jpg',
+      description: 'Presentatie van onze chatbot voor het Rode Kruis'
+    },
+    {
+      type: 'video',
+      path: 'assets/videos/hackathon-demo.mp4',
+      description: 'Demonstratie van de AI-chatbot die we hebben ontwikkeld'
+    }
+  ];
 }

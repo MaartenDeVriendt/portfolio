@@ -37,4 +37,22 @@
       <p *ngFor="let paragraph of reflectie">{{paragraph}}</p>
     </div>
   </section>
+  
+  <section class="activity-section">
+    <h2>Media:</h2>
+    <div class="media-container">
+      <div *ngFor="let item of media" class="media-item">
+        <ng-container *ngIf="item.type === 'image'">
+          <img [src]="item.path" [alt]="item.description" class="media-image" loading="lazy">
+        </ng-container>
+        <ng-container *ngIf="item.type === 'video'">
+          <video controls class="media-video">
+            <source [src]="item.path" type="video/mp4">
+            Je browser ondersteunt geen video's.
+          </video>
+        </ng-container>
+        <p class="media-description">{{item.description}}</p>
+      </div>
+    </div>
+  </section>
 </div>

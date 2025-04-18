@@ -43,4 +43,27 @@ export class Activity4Component {
     'Daarnaast heb ik ervaren hoe belangrijk effectieve communicatie is. In stressvolle en chaotische situaties moet je snel, kort, duidelijk en efficiënt te overleggen. Toch maakten we daar nu binnen stappen in, wat zich vertaalde in betere beslissingen en snellere aanpassingen tijdens wedstrijden.',
     'Het zijn deze dingen die ik geleerd heb, die me sterker hebben gemaakt. Het draait niet alleen om snel en goed spelen, maar ook om dingen zoals samenwerken, scherp blijven onder druk en leren uit je fouten. Dat zijn vaardigheden die ook buiten het gamen nuttig zijn. Ik kijk er met een goed gevoel op terug en neem zeker dat ik hier dingen uit meeneem waar ik nog iets aan heb, of dat nu bij games is of daarbuiten.'
   ];
+  
+  media = [
+    {
+      type: 'image',
+      path: 'assets/fomMe.jpeg',
+      description: 'mu70 in actie'
+    },
+    {
+      type: 'image',
+      path: 'assets/fomTeam.png',
+      description: 'Ons team tijdens het Frag-o-Matic evenement'
+    },
+    {
+      type: 'image',
+      path: 'assets/fomMatch.jpeg',
+      description: 'Scorebord tijdens een van onze kwartfinale wedstrijden'
+    },
+    {
+      type: 'video',
+      path: 'assets/videos/fragomatic-highlights.mp4',
+      description: 'Hoogtepunten van ons team tijdens het Counter-Strike 2 toernooi'
+    }
+  ];
 }

@@ -44,4 +44,27 @@ export class Activity2Component {
     'De link met de opleiding is duidelijk. De technische kennis die we in de lessen hebben meegekregen, kan ik echt toepassen in het project. Maar ook de zachte kant komt terug, zoals omgaan met feedback, samenwerken en communiceren. De opleiding bereidt ons niet alleen voor op het werken met de techniek, maar ook op hoe je goed omgaat met verschillende situaties, zowel positieve als negatieve. Het leerproces stopt nooit, en dat is me nu nog duidelijker geworden.',
     'Ik heb dit project gekozen omdat het voor mij echt een keerpunt was. Het heeft ervoor gezorgd dat ik terug vertrouwen kreeg in samenwerken, en dat heeft me gebracht waar ik nu sta in mijn opleiding en in mijn stage.'
   ];
+  
+  media = [
+    {
+      type: 'image',
+      path: 'assets/thalento.png',
+      description: 'Mijn Thalento-rapport'
+    },
+    {
+      type: 'image',
+      path: 'assets/figmaResearchProject.png',
+      description: 'Mockup van het Research Project'
+    },
+    {
+      type: 'image',
+      path: 'assets/images/projectweek3.jpg',
+      description: 'Eerste sprintplanning voor het Research Project'
+    },
+    {
+      type: 'video',
+      path: 'assets/videos/projectweek-trace.mp4',
+      description: 'Bezoek aan de bedrijven in Trace tijdens de projectweek'
+    }
+  ];
 }

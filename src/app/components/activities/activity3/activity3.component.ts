@@ -41,4 +41,22 @@ export class Activity3Component {
     'Wat ik uit dit project geleerd heb, is dat het belangrijker is om te zoeken naar oplossingen dan naar schuldigen, en dat leiderschap ook betekent dat je bereid bent om fouten toe te geven wanneer je zelf iets fout hebt aangepakt.',
     'Ik heb deze activiteit gekozen voor mijn portfolio omdat dit project me niet alleen technisch heeft uitgedaagd, maar vooral ook persoonlijk veel heeft bijgebracht. Ik heb geleerd hoe belangrijk goede communicatie is, hoe je in moeilijke momenten beter samen oplossingen zoekt in plaats van met de vinger te wijzen en hoe je als leider ook je eigen fouten onder ogen moet durven zien. Die lessen neem ik mee, niet alleen voor toekomstige projecten, maar ook in het dagelijkse leven. Problemen zullen er altijd zijn, maar hoe je ermee omgaat maakt echt het verschil.'
   ];
+  
+  media = [
+    {
+      type: 'image',
+      path: 'assets/Piramide-van-Lencioni.webp',
+      description: 'Piramide van Lencioni'
+    },
+    {
+      type: 'image',
+      path: 'assets/doekoefening.jpg',
+      description: 'Oefening met het doek'
+    },
+    {
+      type: 'image',
+      path: 'assets/activiteit3.png',
+      description: 'Herschikken van blokken'
+    }
+  ];
 }
