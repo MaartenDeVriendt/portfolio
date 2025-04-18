@@ -1,35 +1,135 @@
 <div class="home-container">
-  <mat-card class="welcome-card">
-    <mat-card-header>
-      <mat-card-title>PORTFOLIO I-Talent</mat-card-title>
-      <mat-card-subtitle>Maarten De Vriendt</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>Welkom op mijn I-Talent portfolio. Hier vind je een overzicht van mijn professionele ontwikkeling, seminars, innovaties en internationale ervaringen.</p>
-    </mat-card-content>
-  </mat-card>
-
-  <h2 class="section-title">Mijn Activiteiten</h2>
-  <div class="activities-grid">
-    <mat-card class="activity-card" *ngFor="let activity of activities" [routerLink]="activity.route">
-      <mat-card-header>
-        <mat-card-title>{{activity.title}}</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{activity.description}}</p>
-      </mat-card-content>
-    </mat-card>
+  <div class="intro-section">
+    <div class="profile-image-container">
+      <img src="assets/lilme.jpeg" alt="Maarten De Vriendt" class="profile-image">
+      <div class="social-links">
+        <a href="https://github.com/MaartenDeVriendt-PXL" target="_blank" class="social-link">
+          <mat-icon>code</mat-icon>
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/maartendevriendt/" target="_blank" class="social-link">
+          <mat-icon>people</mat-icon>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+    <div class="intro-text">
+      <h1>Maarten De Vriendt</h1>
+      <h2 class="subtitle">Full Stack Developer</h2>
+      
+      <div class="intro-paragraph">
+        <p>Mijn naam is Maarten De Vriendt. Al sinds ik klein was, ben ik gefascineerd door computers en technologie. Toch heeft het even geduurd voor ik mijn weg hierin vond. Door een moeilijke jeugd had ik het soms lastig om mezelf te begrijpen of richting te geven aan mijn toekomst. Maar de periode waarin ik mezelf verloor heeft me eigenlijk ook geholpen om mezelf opnieuw te ontdekken, en vandaag sta ik er als iemand die weet waar hij naartoe wil.</p>
+      </div>
+      
+      <div class="strength-container">
+        <div class="strength-item">
+          <mat-icon class="strength-icon">code</mat-icon>
+          <h3>Programmeren</h3>
+          <p>Hoewel ik ADHD heb en concentratie niet altijd vanzelf gaat, is programmeren voor mij net een plek van rust. Waar ik in andere situaties snel afgeleid raak, kan ik in code volledig opgaan.</p>
+        </div>
+        
+        <div class="strength-item">
+          <mat-icon class="strength-icon">loop</mat-icon>
+          <h3>Doorzettingsvermogen</h3>
+          <p>Ik ben uiterlijk vastbijten in een probleem en blijf zoeken tot het is opgelost. Soms is dit lastig, want ik heb het moeilijk met code ongeperfect laten. Maar het toont ook mijn drive om dingen te blijven doorgaan.</p>
+        </div>
+        
+        <div class="strength-item">
+          <mat-icon class="strength-icon">groups</mat-icon>
+          <h3>Teamleiderschap</h3>
+          <p>Tijdens het project bij Bewire nam ik spontaan de leiding op. Ik neem van nature graag het voortouw in een team, ben sociaal en voel me op mijn gemak in contacten met anderen.</p>
+        </div>
+      </div>
+      
+      <div class="bio-details">
+        <h3 class="bio-title">Meer over mij</h3>
+        <p>Tijdens mijn studies toegepaste informatica heb ik niet altijd gemakkelijk gehad. Toch blijf ik altijd volhouden. Naast school zorg ik als mantelzorger voor mijn mama en werk ik in het weekend als pizzabakker bij Giuliano's. Dat vraagt veel discipline, maar het helpt me ook om verantwoordelijkheden te nemen en mijn tijd goed in te delen.</p>
+        
+        <p>Als ik even tijd heb voor mezelf, speel ik graag competitieve games. Niet alleen omdat het leuk is maar ook omdat ik ervan leer om tactisch te denken, om koppig door te hakken en goed samen te werken in een team. Dat zijn ook net de skills die ik gebruik in IT-projecten.</p>
+        
+        <p>Mijn ambitie is om ooit Tech Lead te worden. Niet omdat ik alles al weet, maar omdat ik graag blijf bijleren. Door samen te werken met anderen, merk ik dat je vaak het meeste opsteekt. Ik wil graag een rol opnemen waarin ik deze richting kan bepalen, anderen kan ondersteunen en samen projecten tot een goed einde kan brengen.</p>
+        
+        <p>Mijn Thalento-rapport bevestigt mijn sterke punten: ik denk vaak intuïtief, snel, spontaan en met een goed gevoel voor richting. Structuur helpt me om het beste uit mezelf te halen, en dat probeer ik in mijn aanpak toe te passen en te blijven groeien.</p>
+        
+        <p>Ik ben iemand die soms wat ongewoon denkt, maar altijd met passie, inzet en een grote liefde voor technologie.</p>
+      </div>
+    </div>
   </div>
-  
-  <h2 class="section-title">Uitgelichte Projecten</h2>
-  <div class="activities-grid">
-    <mat-card class="activity-card" *ngFor="let detailedActivity of detailedActivities" [routerLink]="detailedActivity.route">
-      <mat-card-header>
-        <mat-card-title>{{detailedActivity.title}}</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{detailedActivity.description}}</p>
-      </mat-card-content>
-    </mat-card>
+
+  <h2 class="section-title">Projecten</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-header">
+        <h3>Hackathon Den Haag</h3>
+        <div class="project-tags">
+          <span class="tag">Angular</span>
+          <span class="tag">AI</span>
+          <span class="tag">Chatbot</span>
+        </div>
+      </div>
+      <div class="project-content">
+        <img src="assets/hacktuah.png" alt="Hackathon Den Haag Project" class="project-image">
+        <div class="project-overlay">
+          <p>Een AI-chatbot voor het Rode Kruis, ontwikkeld tijdens een hackathon in Den Haag</p>
+          <div class="project-actions">
+            <a href="https://github.com/KerimBoyukakPXL/HackTuah" target="_blank" class="project-button">
+              <mat-icon>code</mat-icon>
+              <span>Code</span>
+            </a>
+            <a href="/activities/1" class="project-button">
+              <mat-icon>info</mat-icon>
+              <span>Details</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <div class="project-header">
+        <h3>Research Project</h3>
+        <div class="project-tags">
+          <span class="tag">Vue.js</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">PWA</span>
+        </div>
+      </div>
+      <div class="project-content">
+        <img src="assets/figmaResearchProject.png" alt="Research Project Mockup" class="project-image">
+        <div class="project-overlay">
+          <p>Een onderzoeksproject ontwikkeld tijdens de 2TIN projectweek met focus op teamwork</p>
+          <div class="project-actions">
+            <a href="/activities/2" class="project-button">
+              <mat-icon>info</mat-icon>
+              <span>Details</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="project-card">
+      <div class="project-header">
+        <h3>Fenego x LukiArt</h3>
+        <div class="project-tags">
+          <span class="tag">Angular</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Azure</span>
+        </div>
+      </div>
+      <div class="project-content">
+        <img src="assets/LuKiArt-logo.jpg.webp" alt="LukiArt" class="project-image">
+        <div class="project-overlay">
+          <p>Stage Fenego x LukiArt</p>
+          <div class="project-actions">
+            <a href="https://test.lukiappie.be" class="project-button">
+              <mat-icon>link</mat-icon>
+              <span>Ga naar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
