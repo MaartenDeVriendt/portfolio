@@ -40,18 +40,18 @@
   
   <section class="activity-section">
     <h2>Media:</h2>
-    <div class="media-container">
+    <div class="media-grid">
       <div *ngFor="let item of media" class="media-item">
-        <ng-container *ngIf="item.type === 'image'">
-          <img [src]="item.path" [alt]="item.description" class="media-image" loading="lazy">
-        </ng-container>
-        <ng-container *ngIf="item.type === 'video'">
-          <video controls class="media-video">
-            <source [src]="item.path" type="video/mp4">
-            Je browser ondersteunt geen video's.
-          </video>
-        </ng-container>
-        <p class="media-description">{{item.description}}</p>
+        <div *ngIf="item.type === 'image'" class="media-image-container" (click)="openImage(item)">
+          <img [src]="item.path" [alt]="item.description" class="media-image">
+          <div class="image-zoom-hint">
+            <mat-icon>zoom_in</mat-icon>
+          </div>
+        </div>
+        <div *ngIf="item.type === 'video'" class="media-video-container">
+          <video [src]="item.path" controls class="media-video"></video>
+        </div>
+        <p class="media-description">{{ item.description }}</p>
       </div>
     </div>
   </section>

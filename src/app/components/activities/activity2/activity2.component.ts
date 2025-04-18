@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { ImageViewerService } from '../../../services/image-viewer.service';
 
 @Component({
   selector: 'app-activity2',
   standalone: true,
-  imports: [CommonModule, MatCardModule],
+  imports: [CommonModule, MatCardModule, MatIconModule],
   templateUrl: './activity2.component.html',
   styleUrls: ['./activity2.component.scss']
 })
@@ -67,4 +69,15 @@ export class Activity2Component {
       description: 'Bezoek aan de bedrijven in Trace tijdens de projectweek'
     }
   ];
+
+  constructor(private imageViewerService: ImageViewerService) {}
+
+  openImage(item: any): void {
+    if (item.type === 'image') {
+      this.imageViewerService.open({
+        src: item.path,
+        description: item.description
+      });
+    }
+  }
 }

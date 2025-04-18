@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
+import { ImageViewerComponent } from './components/shared/image-viewer/image-viewer.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.com
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    ImageViewerComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

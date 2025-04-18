@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { ImageViewerService } from '../../../services/image-viewer.service';
 
 @Component({
   selector: 'app-activity1',
   standalone: true,
-  imports: [CommonModule, MatCardModule],
+  imports: [CommonModule, MatCardModule, MatIconModule],
   templateUrl: './activity1.component.html',
   styleUrls: ['./activity1.component.scss']
 })
@@ -70,4 +72,15 @@ export class Activity1Component {
       description: 'Demonstratie van de AI-chatbot die we hebben ontwikkeld'
     }
   ];
+
+  constructor(private imageViewerService: ImageViewerService) {}
+
+  openImage(item: any): void {
+    if (item.type === 'image') {
+      this.imageViewerService.open({
+        src: item.path,
+        description: item.description
+      });
+    }
+  }
 }
