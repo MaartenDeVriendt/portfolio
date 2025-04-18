@@ -1,0 +1,132 @@
+.eindreflectie-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #9cffac, transparent);
+    
+    body.light-theme & {
+      background: linear-gradient(to right, #ff6d00, transparent);
+    }
+  }
+}
+
+.eindreflectie-section {
+  margin-bottom: 3rem;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #9cffac;
+    position: relative;
+    
+    body.light-theme & {
+      color: #ff6d00;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(to right, #9cffac, transparent);
+      
+      body.light-theme & {
+        background: linear-gradient(to right, #ff6d00, transparent);
+      }
+    }
+  }
+
+  .text-container {
+    p {
+      margin-bottom: 1.2rem;
+      line-height: 1.7;
+      text-align: justify;
+      font-size: 1.05rem;
+    }
+  }
+}
+
+.x-factor-section {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.x-factor-container {
+  max-width: 800px;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(30, 30, 30, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  
+  body.light-theme & {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.x-factor-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.afsluiting-section {
+  background-color: rgba(30, 30, 30, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 4rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  
+  body.light-theme & {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #ff6d00;
+  }
+  
+  &::before {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100px;
+    background-color: #9cffac;
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
+    
+    body.light-theme & {
+      background-color: #ff6d00;
+    }
+  }
+  
+  h2 {
+    font-size: 2rem;
+    
+    &::after {
+      width: 80px;
+    }
+  }
+  
+  .text-container p:last-child {
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+}

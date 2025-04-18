@@ -9,6 +9,7 @@ import { Activity1Component } from './components/activities/activity1/activity1.
 import { Activity2Component } from './components/activities/activity2/activity2.component';
 import { Activity3Component } from './components/activities/activity3/activity3.component';
 import { Activity4Component } from './components/activities/activity4/activity4.component';
+import { EindreflectieComponent } from './components/eindreflectie/eindreflectie.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,6 +19,7 @@ export const routes: Routes = [
   { path: 'innovation', component: InnovationComponent },
   { path: 'internationalization', component: InternationalizationComponent },
   { path: 'extras', component: ExtrasComponent },
+  { path: 'eindreflectie', component: EindreflectieComponent },
   { path: 'activities/1', component: Activity1Component },
   { path: 'activities/2', component: Activity2Component },
   { path: 'activities/3', component: Activity3Component },
