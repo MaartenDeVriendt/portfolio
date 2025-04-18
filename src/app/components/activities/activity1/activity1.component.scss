@@ -71,6 +71,20 @@
   }
 }
 
+.text-container {
+  margin-top: 1rem;
+  
+  p {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+    text-align: justify;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));

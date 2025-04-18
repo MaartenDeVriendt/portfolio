@@ -1,38 +1,40 @@
 <div class="activity-container">
   <h1 class="page-title">Activiteit 1: {{title}}</h1>
   
-  <section class="activity-section">
-    <h2>Vaardigheden</h2>
-    <ul class="skills-list">
-      <li *ngFor="let skill of skills">{{skill}}</li>
-    </ul>
-  </section>
+
   
   <section class="activity-section">
-    <h2>Projecten</h2>
-    <div class="projects-container">
-      <mat-card class="project-card" *ngFor="let project of projects">
-        <mat-card-header>
-          <mat-card-title>{{project.name}}</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p>{{project.description}}</p>
-          <p class="project-outcome"><strong>Resultaat:</strong> {{project.outcomes}}</p>
-        </mat-card-content>
-      </mat-card>
+    <h2>Doelstelling(en) van de activiteit:</h2>
+    <div class="text-container">
+      <p *ngFor="let doel of doelstellingen">{{doel}}</p>
     </div>
   </section>
   
   <section class="activity-section">
-    <h2>Over deze activiteit</h2>
-    <p>
-      Projectmanagement is een essentiële vaardigheid in de moderne werk- en studieomgeving. 
-      Door het toepassen van gestructureerde methodologieën zoals Agile/Scrum heb ik geleerd hoe ik complexe 
-      projecten kan verdelen in beheersbare taken, resources efficiënt kan toewijzen, en tijdig kan opleveren.
-    </p>
-    <p>
-      In mijn rol als projectmanager heb ik geleerd om te gaan met verschillende stakeholders, 
-      risico's te identificeren en te mitigeren, en teams te motiveren om gezamenlijke doelen te bereiken.
-    </p>
+    <h2>Eigen doelstellingen:</h2>
+    <div class="text-container">
+      <p *ngFor="let doel of eigenDoelstellingen">{{doel}}</p>
+    </div>
+  </section>
+  
+  <section class="activity-section">
+    <h2>Optionele teamsamenstelling (taakverdeling):</h2>
+    <div class="text-container">
+      <p *ngFor="let team of teamsamenstelling">{{team}}</p>
+    </div>
+  </section>
+  
+  <section class="activity-section">
+    <h2>Kern:</h2>
+    <div class="text-container">
+      <p *ngFor="let paragraph of kern">{{paragraph}}</p>
+    </div>
+  </section>
+  
+  <section class="activity-section">
+    <h2>Reflectieopdracht:</h2>
+    <div class="text-container">
+      <p *ngFor="let paragraph of reflectie">{{paragraph}}</p>
+    </div>
   </section>
 </div>

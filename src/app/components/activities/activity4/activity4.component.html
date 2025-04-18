@@ -1,1 +1,39 @@
-<p>activity4 works!</p>
+<div class="activity-container">
+  <h1 class="page-title">Activiteit 4: {{title}}</h1>
+  
+  
+  <section class="activity-section">
+    <h2>Doelstelling(en) van de activiteit:</h2>
+    <div class="text-container">
+      <p *ngFor="let doel of doelstellingen">{{doel}}</p>
+    </div>
+  </section>
+  
+  <section class="activity-section">
+    <h2>Eigen doelstellingen:</h2>
+    <div class="text-container">
+      <p *ngFor="let doel of eigenDoelstellingen">{{doel}}</p>
+    </div>
+  </section>
+  
+  <section class="activity-section">
+    <h2>Optionele teamsamenstelling (taakverdeling):</h2>
+    <div class="text-container">
+      <p *ngFor="let team of teamsamenstelling">{{team}}</p>
+    </div>
+  </section>
+  
+  <section class="activity-section">
+    <h2>Kern (showcase):</h2>
+    <div class="text-container">
+      <p *ngFor="let paragraph of kern">{{paragraph}}</p>
+    </div>
+  </section>
+  
+  <section class="activity-section">
+    <h2>Reflectieopdracht:</h2>
+    <div class="text-container">
+      <p *ngFor="let paragraph of reflectie">{{paragraph}}</p>
+    </div>
+  </section>
+</div>
